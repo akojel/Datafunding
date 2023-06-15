@@ -3,11 +3,37 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter,Route,
+  Routes } from "react-router-dom";
+import Home from './components/Home';
+import Buydata from './components/Buydata';
+import Buyairtime from './components/Buyairtime';
+import Cable from  './components/Cable';
+import Board from './components/Board';
+import Admin from './components/Admin';
+import FundWallet from './components/FundWallet';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Routes>
+    <Route path='/' element={<App/>} />
+    <Route path='/home' element={<Home/>} />
+    <Route path='/buydata' element={<Buydata/>} />
+    <Route path='/buyairtime' element={<Buyairtime/>} />
+    <Route path='/board' element={<Board/>} />
+    <Route path='/cable' element={<Cable/>} />
+    <Route path='/board' element={<Board/>} />
+    <Route path='/admin' element={<Admin/>} />
+    <Route path='/fundWallet' element={<FundWallet/>} />
+    
+    
+    
+    
+    </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
